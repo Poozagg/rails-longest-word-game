@@ -1,0 +1,14 @@
+<div class="d-flex">
+  <% @letters.each do |letter| %>
+    <p class="shadow p-3 mb-2 mx-2 text-white bg-primary border"><%= letter.capitalize %></p>
+  <% end %>
+</div>
+<%# <div class="p-3 mb-2 mx-2 bg-primary border-0"></div> %>
+<p>What is the longest word you can find?</p>
+<form action="/score" method="score" data-turbo="false">
+  <!-- ... -->
+  <div class="d-flex">
+  <input type="text" name="word" class="form-control">
+  <input type="submit" value="Play">
+  </div>
+</form>
